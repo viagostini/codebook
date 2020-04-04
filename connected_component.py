@@ -10,3 +10,17 @@ def connected_component(adj, start, visited=None):
         connected_component(adj, child, visited)
     
     return visited
+
+def get_all_components(adj):
+    comps = []
+    visited  = set()
+
+    node = 0
+    while node < len(adj):
+        if node not in visited:
+            comp = connected_component(adj, node)
+            comps.append(comp)
+            visited = visited.union(comp)
+        node = node + 1
+
+    return comps
