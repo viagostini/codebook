@@ -3,16 +3,33 @@ from connected_component import *
 
 @pytest.fixture
 def single():
-    return [set([1, 2]), set([0, 3, 4]), set([0, 5, 6]),
-             set([1]), set([1]), set([2]), set([2])]
+    return {
+        0: set([1, 2]),
+        1: set([0, 3, 4]),
+        2: set([0, 5, 6]),
+        3: set([1]),
+        4: set([1]),
+        5: set([2]),
+        6: set([2])
+    }
 
 @pytest.fixture
 def two_comp():
-    return [set([1, 2]), set([0]), set([0]), set([4]), set([3])]
+    return {
+        0: set([1, 2]),
+        1: set([0]),
+        2: set([0]),
+        3: set([4]),
+        4: set([3])
+    }
 
 @pytest.fixture
 def isolated():
-    return [set(), set(), set()]
+    return {
+        0: set(),
+        1: set(),
+        2: set()
+    }
 
 # ----------- Test Connected Component Method ----------- #
 
