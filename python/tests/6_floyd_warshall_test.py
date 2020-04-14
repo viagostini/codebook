@@ -13,4 +13,6 @@ def test_floyd_warshall():
              [11, 3, 10, 0, 8],
              [18, 10, 17, 8, 0]]
 
-    assert floyd_warshall(weights) == dists
+    d, p = floyd_warshall(weights)
+    assert d == dists
+    assert restore_path(0, 4, p) == [0, 2, 1, 4]

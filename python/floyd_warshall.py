@@ -1,24 +1,36 @@
+"""
+Assumes no negative weights cycles, but may contain negative weight edges
+Time Complexity: O(V^3)
+Space Complexity: O(V^2)
+
+"""
+
 import math
 import copy
-
-dist = [
-    [0, 9, 1, 30, float('inf')],
-    [9, 0, 7, 3, 10],
-    [1, 7, 0, 15, float('inf')],
-    [30, 3, 15, 0, 8],
-    [float('inf'), 10, float('inf'), 8, 0]
-]
+from itertools import product
 
 def floyd_warshall(weights):
     n = len(weights)
     d = copy.deepcopy(weights)
-    for k in range(n):
-        for i in range(n):
-            for j in range(n):
-                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+    p = [[-1] * n for i in range(n)]
 
-    return d
+    for i, j in product(range(n), repeat=2):
+        if d[i][j] != float('inf'):
+            p[i][j] = j
 
-dists = floyd_warshall(dist)
-print(dists)
-print(dist)
+    for k, i, j in product(range(n), repeat=3):
+        new_dist = d[i][k] + d[k][j]
+        if new_dist < d[i][j]:
+            d[i][j] = new_dist
+            p[i][j] = p[i][k]
+
+    return d, p
+
+
+def restore_path(start, end, p):
+    path = [start]
+    
+    while path[-1] != end:
+        path.append(p[path[-1]][end])
+
+    return path
