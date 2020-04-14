@@ -28,8 +28,10 @@ def floyd_warshall(weights):
 
 
 def restore_path(start, end, p):
-    path = [start]
+    if p[start][end] == -1:
+        return None
     
+    path = [start]  
     while path[-1] != end:
         path.append(p[path[-1]][end])
 
