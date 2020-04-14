@@ -7,7 +7,7 @@ def connected_components(adj):
     node = 0
     while node < len(adj):
         if node not in visited:
-            comp = dfs(adj, node)
+            comp = set(dfs(adj, node))
             comps.append(comp)
             visited = visited.union(comp)
         node = node + 1
