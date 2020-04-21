@@ -25,3 +25,14 @@ jobs:
         pip install pytest
         cd python
         python -m pytest
+        
+    - name: Generate coverage report
+      run: |
+        pip install pytest-cov
+        cd python
+        python -m pytest --cov tests --cov-report=xml
+        
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
