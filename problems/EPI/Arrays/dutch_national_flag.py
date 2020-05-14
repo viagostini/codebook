@@ -18,8 +18,6 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
             count[i] -= 1
             j += 1
 
-    return A
-
 def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
     pivot = A[pivot_index]
 
@@ -46,5 +44,4 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
         else:
             larger -= 1
             A[equal], A[larger] = A[larger], A[equal]
-
-    return A
+            
