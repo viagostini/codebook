@@ -1,5 +1,11 @@
 class LinkedList(object):
-    
+    '''
+    Implements a singly linked list with insert, delete and get methods.
+
+    TODO: maybe one day make it a deque-like implementation with queue/stack
+    functions.
+    '''
+
     class ListNode(object):
         def __init__(self, data=0, next_node=None):
             self.data = data
@@ -9,12 +15,44 @@ class LinkedList(object):
         self.size = 0
         self.head = head
 
-    # TODO: delete()
+    def delete(self, pos=None):
+        '''
+        Deletes ListNode at position `pos`.
+        Default position to delete from is at end of list.
+        (Note that this is worst-case in terms of time complexity.)
 
-    def insert(self, data, pos=0):
+        Time Complexity: O(N)
+        Space Complexity: O(1)
+        '''
+        if pos is None:
+            pos = self.size-1
+
+        node = self.head
+        if pos:
+            for _ in range(pos-1):
+                node = node.next
+            node.next = node.next.next
+        else:
+            self.head = node.next
+
+        self.size -= 1
+
+
+    def insert(self, data, pos=None):
+        '''
+        Inserts a new ListNode with data `data` at position `pos`
+        Default position to insert is at end of list.
+        (Note that this is worst-case in terms of time complexity.)
+
+        Time Complexity: O(N)
+        Space Complexity: O(1)
+        '''
+        if pos is None:
+            pos = self.size
+        
         new_node = self.ListNode(data)
 
-        if pos == 0:
+        if not pos:
             new_node.next = self.head
             self.head = new_node
         else:
@@ -43,15 +81,3 @@ class LinkedList(object):
             out.append(node.data)
             node = node.next
         return out
-
-
-
-a = LinkedList()
-a.insert(1, 0)
-a.insert(2, 1)
-a.insert(3)
-a.insert(4)
-a.insert(7, 2)
-a.insert(10, a.size)
-print(a.to_list())
-print(a.get(2))
