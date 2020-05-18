@@ -2,7 +2,7 @@ import functools
 
 def levenshtein_distance(A: str, B: str) -> int:
     '''
-    dist[i][j] = distance(A[i:], B[j:])
+    dist[i][j] = distance(A[:i], B[:j])
 
     Note: this version of the solution uses Python's 
     functool.lru_cache decorator for memoization. There is a more
@@ -34,7 +34,7 @@ def levenshtein_distance(A: str, B: str) -> int:
 
 def levenshtein_distance(A: str, B: str) -> int:
     '''
-    dist[i][j] = distance(A[i:], B[j:])
+    dist[i][j] = distance(A[:i], B[:j])
 
     Time Complexity: O(len(a) * len(b))
     Space Complexity: O(len(a) * len(b))
@@ -100,10 +100,12 @@ def levenshtein_distance(A, B):
 def levenshtein_distance(A, B):
     '''
     Iterative version of edit distance optimized for space by
-    recycling two rows instead of using len(A) rows.
+    recycling two rows. For this we can also make our rows k
+    elements wide, where k = min(len(A), len(B)) to optmize it
+    even further.
 
     Time Complexity: O(len(A) * len(B))
-    Space Complexity: O(len(B))
+    Space Complexity: O(min(len(A), len(B))
     '''
 
     from itertools import product
@@ -128,6 +130,9 @@ def levenshtein_distance(A, B):
                 dist[k][j] = 1 + min(ins, rem, sub)
 
         return dist[m % 2][n]
+
+    if len(A) < len(B):
+        A, B = B, A
 
     m, n = len(A), len(B)
     dist = [ [0] * (n + 1) for _ in range(2)]
