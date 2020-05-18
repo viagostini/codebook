@@ -2,7 +2,7 @@ import functools
 
 def levenshtein_distance(A: str, B: str) -> int:
     '''
-    dist[i][j] = distance(A[i:], B[j:])
+    dist[i][j] = distance(A[:i], B[:j])
 
     Note: this version of the solution uses Python's 
     functool.lru_cache decorator for memoization. There is a more
@@ -34,7 +34,7 @@ def levenshtein_distance(A: str, B: str) -> int:
 
 def levenshtein_distance(A: str, B: str) -> int:
     '''
-    dist[i][j] = distance(A[i:], B[j:])
+    dist[i][j] = distance(A[:i], B[:j])
 
     Time Complexity: O(len(a) * len(b))
     Space Complexity: O(len(a) * len(b))
