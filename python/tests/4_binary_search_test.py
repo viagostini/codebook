@@ -1,5 +1,5 @@
 import pytest
-from binary_search import *
+from searching.binary_search import *
 
 @pytest.fixture
 def arr():

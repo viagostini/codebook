@@ -1,6 +1,6 @@
 import pytest
 
-from z_algorithm import *
+from strings.z_algorithm import *
 
 def test_find_all_occurrences():
     s = 'aabcaabxaaaz'

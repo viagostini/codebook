@@ -1,5 +1,5 @@
 import pytest
-from euclides import *
+from number_theory.euclides import *
 
 def test_gcd():
     assert gcd(7919, 326) == 1

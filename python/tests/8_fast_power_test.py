@@ -1,5 +1,5 @@
 import pytest
-from fast_power import *
+from number_theory.fast_power import *
 
 def test_fast_power():
     assert fast_pow(234, 0) == 1

@@ -1,5 +1,5 @@
 import pytest
-from polygon import *
+from geometry.polygon import *
 
 def test_ccw():
     assert ccw((3,2), (2,3), (1,2)) > 0

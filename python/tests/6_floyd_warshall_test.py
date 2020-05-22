@@ -1,4 +1,4 @@
-from floyd_warshall import *
+from graphs.floyd_warshall import *
 
 weights = [[0, 9, 1, 30, float('inf')],
         [9, 0, 7, 3, 10],

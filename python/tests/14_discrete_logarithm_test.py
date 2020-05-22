@@ -1,5 +1,5 @@
 import pytest
-from discrete_logarithm import *
+from number_theory.discrete_logarithm import *
 
 def test_discrete_logarithm():
     x = discrete_logarithm(5, 7, 17)

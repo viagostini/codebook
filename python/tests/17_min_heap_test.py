@@ -1,6 +1,6 @@
 import pytest
 
-from min_heap import *
+from data_structures.min_heap import *
 
 def test_init():
     h = MinHeap()

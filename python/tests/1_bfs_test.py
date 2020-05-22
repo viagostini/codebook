@@ -1,5 +1,6 @@
 import pytest
-from bfs import *
+
+from graphs.bfs import *
 
 @pytest.fixture
 def single():

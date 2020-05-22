@@ -1,5 +1,5 @@
 import pytest
-from bit_manipulation import *
+from bit_manipulation.bit_manipulation import *
 
 def test_is_set():
     assert is_set(8, 0) == False

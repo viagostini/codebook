@@ -1,7 +1,8 @@
 import pytest
 import os
 import numpy as np
-from linear_regression import gradient_descent
+
+from machine_learning.linear_regression import gradient_descent
 
 def test_linear_regression():
     data = np.loadtxt('tests/assets/house_prices.txt', delimiter=',')

@@ -1,4 +1,4 @@
-from dijkstra import *
+from graphs.dijkstra import *
 
 adj = {
     0: [ (1, 9), (2, 1), (3, 30) ],

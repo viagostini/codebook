@@ -1,5 +1,6 @@
 import pytest
-from connected_component import *
+
+from graphs.connected_component import *
 
 @pytest.fixture
 def single():

@@ -1,5 +1,5 @@
 import pytest
-from linked_list import *
+from data_structures.linked_list import *
 
 def test_initialization():
     L = LinkedList()

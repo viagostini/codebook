@@ -1,5 +1,6 @@
 import pytest
-from lcs import *
+
+from strings.lcs import *
 
 def test_lcs():
     assert lcs('abcdef', 'abfde') == 'abde'

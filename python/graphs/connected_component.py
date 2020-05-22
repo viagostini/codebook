@@ -1,4 +1,4 @@
-from dfs import *
+from graphs.dfs import *
 
 def connected_components(adj):
     comps = []

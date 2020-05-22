@@ -1,4 +1,4 @@
-from euclides import *
+from number_theory.euclides import *
 
 """
 Computes a^(-1) mod m

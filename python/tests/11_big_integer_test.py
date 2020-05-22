@@ -1,5 +1,5 @@
 import pytest
-from big_integer import *
+from data_structures.big_integer import *
 
 def test_convert_to_number():
     assert to_number('+23782') == [2, 8, 7, 3, 2, '+']
