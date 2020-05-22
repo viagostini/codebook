@@ -26,37 +26,37 @@ want to get more experience with it, so it's a good thing for me too.
 Disclaimer: All these implementations are subject to change at any time.
 
 **Data Structures**
-- [x] [Linked List](python/linked_list.py)
-- [x] [Binary Heap (Min-Heap)](python/min_heap.py)
+- [x] [Linked List](python/data_structures/linked_list.py)
+- [x] [Binary Heap (Min-Heap)](python/data_structures/min_heap.py)
 
 **Searching**
-- [x] [Binary Search](python/binary_search.py)
+- [x] [Binary Search](python/searching/binary_search.py)
 
 **Strings**
-- [x] [Longest Common Substring](python/lcs.py)
-- [x] [Exact Pattern Matching (Z-Algorithm)](python/z_algorithm.py) 
+- [x] [Longest Common Substring](python/strings/lcs.py)
+- [x] [Exact Pattern Matching (Z-Algorithm)](python/strings/z_algorithm.py) 
 
 **Math**
-- [x] [Bit Manipulation Tricks](python/bit_manipulation.py) 
-- [x] [Euclides Algorithm for GCD (Normal, Extended) and LCM](python/euclides.py)
-- [x] [Modular Inverse](python/mod_inverse.py)
-- [x] [Discrete Logarithm](python/discrete_logarithm.py)
-- [x] [Fast Exponentiation (Normal, Modular)](python/fast_power.py)
-- [x] [Big Integer (not a particularly good implementation, will probably be re-written)](python/big_integer.py)
+- [x] [Bit Manipulation Tricks](python/bit_manipulation/bit_manipulation.py) 
+- [x] [Euclides Algorithm for GCD (Normal, Extended) and LCM](python/number_theory/euclides.py)
+- [x] [Modular Inverse](python/number_theory/mod_inverse.py)
+- [x] [Discrete Logarithm](python/number_theory/discrete_logarithm.py)
+- [x] [Fast Exponentiation (Normal, Modular)](python/number_theory/fast_power.py)
+- [x] [Big Integer (not a particularly good implementation, will probably be re-written)](python/data_structures/big_integer.py)
 
 **Machine Learning (with numpy)**
-- [x] [Linear Regression](python/linear_regression.py)
+- [x] [Linear Regression](python/machine_learning/linear_regression.py)
 
 **Graphs** (this section will probably be re-written soon)
-- [x] [DFS](python/dfs.py)
-- [x] [BFS](python/bfs.py)
-- [x] [Connected Components](python/connected_component.py)
-- [x] [Dijkstra Shortest Path](python/dijkstra.py)
-- [x] [Floyd Warshall All-Pairs Shortest Paths](python/floyd_warshall.py)
+- [x] [DFS](python/graphs/dfs.py)
+- [x] [BFS](python/graphs/bfs.py)
+- [x] [Connected Components](python/graphs/connected_component.py)
+- [x] [Dijkstra Shortest Path](python/graphs/dijkstra.py)
+- [x] [Floyd Warshall All-Pairs Shortest Paths](python/graphs/floyd_warshall.py)
 
 **Geometry**
-- [x] [Test Convexity](python/polygon.py) 
-- [x] [Polygon Area](python/polygon.py)
+- [x] [Test Convexity](python/geometry/polygon.py) 
+- [x] [Polygon Area](python/geometry/polygon.py)
 
 ## Testing
 Unit testing for the code in `python/` is made by myself with `pytest` and the
