@@ -5,15 +5,16 @@ class BinarySearchTree:
     This binary search tree behaves like a tree map since you store
     (key, value) pairs and they are sorted internally by key (if you
     do an inorder traversal). This makes it so that most operations
-    on the tree will be O(log n) instead of O(1) with hash maps, in
+    on the tree will be O(h) instead of O(1) with hash maps, in
     exchange for being able to mantain order.
 
     Implemented Methods
     -----------------
     inorder()        : O(n)
-    search(key)      : O(log n)
-    insert(key, val) : O(log n)
-    delete(key)      : O(log n)
+    search(key)      : O(h)
+    insert(key, val) : O(h)
+    delete(key)      : O(h)
+    
     """
 
     class TreeNode:
