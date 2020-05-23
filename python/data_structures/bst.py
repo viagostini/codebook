@@ -75,11 +75,49 @@ class BinarySearchTree:
 
         self.size += 1
 
-    def inorder(self, out=[]):
+    def delete(self, key):
+        if not self.root or key == self.root.key:
+            return self.__delete_root(self.root)
+
+        node = self.root
+        while True:
+            if key < node.key:
+                if not node.left or key == node.left.key:
+                    node.left = self.__delete_root(node.left)
+                    break
+                node = node.left
+            else:
+                if not node.right or key == node.right.key:
+                    node.right = self.__delete_root(node.right)
+                    break
+                node = node.right
+
+        return self.root
+
+
+
+    def __delete_root(self, root):
+        if not root:
+            return None
+
+        if not root.right:
+            return root.left
+        
+        node = root.right
+        while node.left:
+            node = node.left
+        
+        node.left = root.left
+        return root.right
+
+
+    def inorder(self, out=None):
         """
         Iteratively traverse nodes in sorted order and return them in
         list format.
         """       
+        if not out:
+            out = []
 
         node, stack = self.root, []
         while stack or node:
@@ -92,3 +130,17 @@ class BinarySearchTree:
                 node = node.right
             
         return out
+
+    def __setitem__(self, key, val):
+        self.insert(key, val)
+
+    def __contains__(self, key):
+        if self.search(key):
+            return True
+        return False
+
+    def __getitem__(self, key):
+        return self.search(key)
+
+    def __delitem__(self,key):
+        self.delete(key)
