@@ -14,7 +14,7 @@ def test_insert():
         bst[k] = v
 
     assert bst.size == 5
-    assert bst.inorder() == [(3,45), (10,1), (13,12), (15,2), (20,7)]
+    assert list(bst) == sorted(nodes)
 
 def test_search():
     bst = BinarySearchTree()
@@ -37,6 +37,7 @@ def test_delete():
         bst[k] = v
 
     del bst[13]
-    assert bst.inorder() == [(3,45), (10,1), (15,2), (20,7)]
+    assert list(bst) == [(3,45), (10,1), (15,2), (20,7)]
+    
     del bst[10]
-    assert bst.inorder() == [(3,45), (15,2), (20,7)]
+    assert list(bst) == [(3,45), (15,2), (20,7)]

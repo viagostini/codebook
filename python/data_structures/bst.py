@@ -15,8 +15,6 @@ class BinarySearchTree:
     insert(key, val) : O(h)
     delete(key)      : O(h)
     
-    TODO: turn inorder() into generator
-    
     """
 
     class TreeNode:
@@ -114,10 +112,8 @@ class BinarySearchTree:
                 node = node.left
             else:
                 node = stack.pop()
-                out.append((node.key, node.val))
+                yield (node.key, node.val)
                 node = node.right
-            
-        return out
 
     # operators
 
@@ -134,3 +130,6 @@ class BinarySearchTree:
 
     def __delitem__(self,key):
         self.delete(key)
+
+    def __iter__(self):
+        yield from self.inorder(self.root)
