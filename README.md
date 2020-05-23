@@ -28,6 +28,8 @@ Disclaimer: All these implementations are subject to change at any time.
 **Data Structures**
 - [x] [Linked List](python/data_structures/linked_list.py)
 - [x] [Binary Heap (Min-Heap)](python/data_structures/min_heap.py)
+- [x] [Binary Search Tree (Iterative)](python/data_structures/bst.py)
+- [x] [Binary Search Tree (Recursive)](python/data_structures/bst_recursive.py)
 
 **Searching**
 - [x] [Binary Search](python/searching/binary_search.py)

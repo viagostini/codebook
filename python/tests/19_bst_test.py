@@ -4,8 +4,7 @@ from data_structures.bst import *
 
 def test_init():
     bst = BinarySearchTree()
-    assert bst.empty()
-    assert bst.size() == 0
+    assert bst.size == 0
 
 def test_insert():
     bst = BinarySearchTree()
@@ -14,8 +13,7 @@ def test_insert():
     for k, v in nodes:
         bst.insert(k, v)
 
-    assert not bst.empty()
-    assert bst.size() == 5
+    assert bst.size == 5
     assert bst.inorder() == [(3,45), (10,1), (13,12), (15,2), (20,7)]
 
 def test_search():
