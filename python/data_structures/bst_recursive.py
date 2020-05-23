@@ -15,6 +15,8 @@ class BinarySearchTree:
     insert(key, val) : O(h)
     delete(key)      : O(h)
     
+    TODO: turn inorder() into generator
+
     """
 
     class TreeNode:
@@ -38,10 +40,6 @@ class BinarySearchTree:
         return self.__search(self.root, key)
 
     def insert(self, key, val):
-        """
-        Wrapper for internal __insert function
-        """
-
         self.size += 1
         self.root = self.__insert(self.root, key, val)
 
@@ -49,19 +47,10 @@ class BinarySearchTree:
         self.__delete(self.root, key)
 
     def inorder(self):
-        """
-        Wrapper for internal __inorder function
-        """
-        
         return self.__inorder(self.root)
 
 
     def __search(self, root, key):
-        """
-        Recursively searches for key in binary search tree and returns
-        associated value if it exists, None otherwise
-        """
-
         if not root:
             return None  
         
@@ -74,11 +63,6 @@ class BinarySearchTree:
         return self.__search(root.right, key)
 
     def __insert(self, root, key, val):
-        """
-        Recursively inserts key value pair in binary search tree.
-        If the key already exists, replaces its value with the new one
-        """
-
         if not root:
             return self.TreeNode(key, val)
 
@@ -121,11 +105,6 @@ class BinarySearchTree:
         return node
 
     def __inorder(self, root):
-        """
-        Recursively traverse nodes in sorted order and return them in
-        list format.
-        """
-
         if not root:
             return []
 
@@ -134,7 +113,8 @@ class BinarySearchTree:
 
         return left + [(root.key, root.val)] + right
     
-   
+    # operators
+
     def __setitem__(self, key, val):
         self.insert(key, val)
 

@@ -15,6 +15,8 @@ class BinarySearchTree:
     insert(key, val) : O(h)
     delete(key)      : O(h)
     
+    TODO: turn inorder() into generator
+    
     """
 
     class TreeNode:
@@ -31,11 +33,6 @@ class BinarySearchTree:
         self.size = 0
 
     def search(self, key):
-        """
-        Iteratively searches for key in binary search tree and returns
-        associated value if it exists, None otherwise
-        """
-
         node = self.root
         while node and key != node.key:
             if key < node.key:
@@ -45,11 +42,6 @@ class BinarySearchTree:
         return node.val if node else None
 
     def insert(self, key, val):
-        """
-        Iteratively inserts key value pair in binary search tree.
-        If the key already exists, replaces its value with the new one
-        """
-
         if not self.size:
             self.root = self.TreeNode(key, val)
             self.size += 1
@@ -111,11 +103,7 @@ class BinarySearchTree:
         return root.right
 
 
-    def inorder(self, out=None):
-        """
-        Iteratively traverse nodes in sorted order and return them in
-        list format.
-        """       
+    def inorder(self, out=None):   
         if not out:
             out = []
 
@@ -130,6 +118,8 @@ class BinarySearchTree:
                 node = node.right
             
         return out
+
+    # operators
 
     def __setitem__(self, key, val):
         self.insert(key, val)
