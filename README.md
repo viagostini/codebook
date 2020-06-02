@@ -4,7 +4,8 @@
 
 ## Motivation
 This is meant to be my personal repository containing reference implementations
-for all the different data structures and algorithms that I feel like implementing. Also, I'll be uploading my solutions to coding problems from sources like 
+for all the different data structures and algorithms that I feel like implementing.
+Also, I'll be uploading my solutions to coding problems from sources like 
 competitive programming websites or the book Elements of Programming Interviews,
 for example. Many of these will be classic problems and solutions that are
 worthy keeping a reference implementation. 
@@ -45,6 +46,7 @@ Disclaimer: All these implementations are subject to change at any time.
 - [x] [Discrete Logarithm](python/number_theory/discrete_logarithm.py)
 - [x] [Fast Exponentiation (Normal, Modular)](python/number_theory/fast_power.py)
 - [x] [Big Integer (not a particularly good implementation, will probably be re-written)](python/data_structures/big_integer.py)
+- [x] [Trapezoidal Integration](python/numeric/trapezoid_integration.py)
 
 **Machine Learning (with numpy)**
 - [x] [Linear Regression](python/machine_learning/linear_regression.py)
