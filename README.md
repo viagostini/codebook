@@ -54,6 +54,7 @@ Disclaimer: All these implementations are subject to change at any time.
 **Graphs** (this section will probably be re-written soon)
 - [x] [DFS](python/graphs/dfs.py)
 - [x] [BFS](python/graphs/bfs.py)
+- [x] [Topological Sorting](python/graphs/topological_sort.py)
 - [x] [Connected Components](python/graphs/connected_component.py)
 - [x] [Dijkstra Shortest Path](python/graphs/dijkstra.py)
 - [x] [Floyd Warshall All-Pairs Shortest Paths](python/graphs/floyd_warshall.py)
