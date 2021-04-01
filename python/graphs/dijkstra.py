@@ -38,5 +38,5 @@ def restore_path(start, end, p):
         path.append(v)
         v = p[v]
     path.append(start)
-    
+
     return path[::-1]
